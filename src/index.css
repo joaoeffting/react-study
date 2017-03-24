@@ -1,0 +1,35 @@
+#app-container {
+  margin-top:85px;
+}
+
+.todo-panel {
+  margin-top:20px;
+}
+
+.footer-dark {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background-color:#3e3f3a;
+}
+
+.item-todo i {
+  color:#3e3f3a;
+  margin-left:54%;
+}
+
+.panel-default > .panel-heading {
+  background-color:#3e3f3a;
+  border-color:#dfd7ca;
+}
+
+.panel-default > .panel-heading h3 {
+  color:#fff;
+}
+
+.input-group-addon {
+  background-color:#3e3f3a;
+  border-color:#dfd7ca;
+  color:#fff;
+}
+

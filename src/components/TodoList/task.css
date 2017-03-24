@@ -1,0 +1,24 @@
+.task-body {
+    padding-bottom: 0;
+}
+
+.task-footer {
+    background: #fff;
+    margin-top: 10px;
+}
+
+.task-done {
+    border: green 1px solid;
+}
+
+.task-undone {
+    border: red 1px solid;
+}
+
+.task-done .task-footer {
+    border-top: 1px solid green;
+}
+
+.task-undone .task-footer {
+    border-top: 1px solid red;
+}
