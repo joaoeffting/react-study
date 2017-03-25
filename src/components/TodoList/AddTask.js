@@ -1,8 +1,25 @@
+// @flow
+
 import React, { Component } from 'react';
 
+type Props = {
+    onAddTask: (text: string) => void
+}
+
 class AddTask extends Component {
-    state = {
-        task: ''
+    props: Props;
+
+    state: {
+        task: string
+    }
+
+    onAddTask: () => void;
+
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+            task: ''
+        }
     }
     onAddTask = () => {
         this.props.onAddTask(this.state.task);

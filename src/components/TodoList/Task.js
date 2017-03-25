@@ -1,7 +1,9 @@
+// @flow
+
 import React from 'react';
 import './task.css';
 
-const Task = ({id, text, done, onDone, onRemove}) => {
+const Task = ({id, text, done, onDone, onRemove} : {id: number, text: string, done: boolean, onDone: () => void, onRemove: () => void}) => {
     let panelClass = "panel panel-default item-todo";
     if (done) panelClass += " task-done"
     else panelClass += " task-undone";

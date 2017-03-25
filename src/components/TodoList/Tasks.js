@@ -1,7 +1,9 @@
+// @flow
+
 import React from 'react';
 import Task from './Task';
 
-const Tasks = ({tasks, onDone, onRemove}) => {
+const Tasks = ({tasks, onDone, onRemove} : {tasks: Array<Task>, onDone: (id: number, checked: boolean) => void, onRemove: (id: number) => void}) => {
     return (
         <div className="container">
             <div className="panel panel-default todo-panel">
@@ -11,14 +13,13 @@ const Tasks = ({tasks, onDone, onRemove}) => {
                 <div className="panel-body">
                     <div className="row">
                         {
-                            tasks.map(task => {
-                                let {id, text, done} = task;
+                            tasks.map((task: Task) => {
                                 return(
                                     <Task
-                                        key={id}
-                                        id={id}
-                                        text={text}
-                                        done={done}
+                                        key={task.id}
+                                        id={task.id}
+                                        text={task.text}
+                                        done={task.done}
                                         onDone={onDone}
                                         onRemove={onRemove}
                                     />
