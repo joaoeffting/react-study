@@ -3,7 +3,7 @@
 import React from 'react';
 import Task from './Task';
 
-const Tasks = ({tasks, onDone, onRemove} : {tasks: Array<Task>, onDone: (id: number, checked: boolean) => void, onRemove: (id: number) => void}) => {
+const Tasks = ({tasks, onDone, onRemove} : {tasks: Array<any>, onDone: (id: number, checked: boolean) => void, onRemove: (id: number) => void}) => {
     return (
         <div className="container">
             <div className="panel panel-default todo-panel">
@@ -13,7 +13,7 @@ const Tasks = ({tasks, onDone, onRemove} : {tasks: Array<Task>, onDone: (id: num
                 <div className="panel-body">
                     <div className="row">
                         {
-                            tasks.map((task: Task) => {
+                            tasks.map((task) => {
                                 return(
                                     <Task
                                         key={task.id}

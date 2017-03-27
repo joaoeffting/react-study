@@ -6,21 +6,17 @@ type Props = {
     onAddTask: (text: string) => void
 }
 
+type State = {
+    task: string
+}
+
 class AddTask extends Component {
     props: Props;
 
-    state: {
-        task: string
+    state: State = {
+        task: ''
     }
 
-    onAddTask: () => void;
-
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            task: ''
-        }
-    }
     onAddTask = () => {
         this.props.onAddTask(this.state.task);
         this.setState({task: ''});
