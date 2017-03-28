@@ -3,7 +3,14 @@
 import React from 'react';
 import Task from './Task';
 
-const Tasks = ({tasks, onDone, onRemove} : {tasks: Array<any>, onDone: (id: number, checked: boolean) => void, onRemove: (id: number) => void}) => {
+type Props = {
+    tasks: Array<any>, 
+    onDone: (id: number, 
+    checked: boolean) => void, 
+    onRemove: (id: number) => void
+}
+
+const Tasks = ({tasks, onDone, onRemove} : Props) => {
     return (
         <div className="container">
             <div className="panel panel-default todo-panel">

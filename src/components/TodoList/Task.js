@@ -3,7 +3,15 @@
 import React from 'react';
 import './task.css';
 
-const Task = ({id, text, done, onDone, onRemove} : {id: number, text: string, done: boolean, onDone: (id: number, checked: boolean) => void, onRemove: (id: number) => void}) => {
+type Props = {
+    id: number, 
+    text: string, 
+    done: boolean, 
+    onDone: (id: number, checked: boolean) => void, 
+    onRemove: (id: number) => void
+}
+
+const Task = ({id, text, done, onDone, onRemove} : Props) => {
     let panelClass = "panel panel-default item-todo";
     if (done) panelClass += " task-done"
     else panelClass += " task-undone";

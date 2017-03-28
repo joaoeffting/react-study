@@ -8,7 +8,8 @@ type State = {
     tasks: Array<any>,
 }
 
-class Todo extends Component {
+//defaultProps, Props, State
+class Todo extends Component<void, {}, State> {
     state: State = {
         tasks: [
             {
