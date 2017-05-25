@@ -4,8 +4,14 @@ import React, { Component } from 'react';
 import Tasks from './Tasks';
 import AddTask from './AddTask';
 
+type Task = {
+  id: number,
+  text: string,
+  done: boolean
+}
+
 type State = {
-    tasks: Array<any>,
+    tasks: Array<Task>,
 }
 
 //defaultProps, Props, State
